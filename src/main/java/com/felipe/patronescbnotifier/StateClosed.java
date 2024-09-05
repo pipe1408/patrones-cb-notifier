@@ -1,13 +1,14 @@
 package com.felipe.patronescbnotifier;
 
 public class StateClosed implements State {
+
     @Override
-    public String onNotificar() {
+    public String doNotify() {
         return "";
     }
 
     @Override
-    public String onPing() {
+    public String doPing() {
         return "";
     }
 }
