@@ -12,6 +12,6 @@ public class Notifier {
 
     public ResponseDTO notificar(String requestTime) {
         ProviderDTO responseTime = this.state.doNotify();
-        return ResponseGenerator.generateResponseDTO(responseTime ,requestTime);
+        return DTOGenerator.generateResponseDTO(responseTime ,requestTime);
     }
 }
