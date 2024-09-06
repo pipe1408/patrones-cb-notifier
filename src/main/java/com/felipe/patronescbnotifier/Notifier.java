@@ -14,8 +14,4 @@ public class Notifier {
         ProviderDTO responseTime = this.state.doNotify();
         return ResponseGenerator.generateResponseDTO(responseTime ,requestTime);
     }
-
-    public void ping() {
-        this.state.doPing();
-    }
 }
