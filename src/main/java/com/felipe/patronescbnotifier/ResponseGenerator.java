@@ -3,9 +3,11 @@ package com.felipe.patronescbnotifier;
 public class ResponseGenerator {
 
     public static ResponseDTO generateResponseDTO(ProviderDTO providerDTO, String requestTime) {
-        if (!"-".equals(providerDTO.body())) {
-            return new ResponseDTO("✅", providerDTO.code(), providerDTO.provider(), requestTime, providerDTO.body(), providerDTO.retries());
+        String result = "❌";
+
+        if (!"ERR".equals(providerDTO.code())) {
+            result = "✅";
         }
-        return new ResponseDTO("❌", providerDTO.code(), providerDTO.provider(), requestTime, providerDTO.body(), providerDTO.retries());
+        return new ResponseDTO(result, providerDTO.code(), providerDTO.provider(), requestTime, providerDTO.body(), providerDTO.retries());
     }
 }
