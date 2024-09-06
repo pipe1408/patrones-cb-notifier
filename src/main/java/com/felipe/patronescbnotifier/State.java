@@ -43,7 +43,7 @@ public abstract class State {
             } catch (Exception e) {
                 System.out.println("Transacción fallida. Reintentos: " + retries);
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(200);
                 } catch (InterruptedException ie) {
                     Thread.currentThread().interrupt();
                 }
