@@ -5,7 +5,7 @@ public class DTOGenerator {
     public static ResponseDTO generateResponseDTO(ProviderDTO providerDTO, String requestTime) {
         String result = "❌";
 
-        if (!"ERROR".equals(providerDTO.code())) {
+        if (!"500".equals(providerDTO.code())) {
             result = "✅";
         }
         return new ResponseDTO(result, providerDTO.code(), providerDTO.provider(), requestTime, providerDTO.body(), providerDTO.retries());

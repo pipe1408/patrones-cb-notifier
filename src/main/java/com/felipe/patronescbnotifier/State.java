@@ -49,7 +49,7 @@ public abstract class State {
                 }
             }
         }
-        providerDTO = DTOGenerator.generateProviderDTO(nombreProveedor, "ERROR", "-", retries);
+        providerDTO = DTOGenerator.generateProviderDTO(nombreProveedor, "500", "-", retries);
         return DTOGenerator.generateResultDTO(false, providerDTO);
     }
 
