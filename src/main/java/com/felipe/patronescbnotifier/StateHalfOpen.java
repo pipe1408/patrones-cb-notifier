@@ -3,8 +3,8 @@ package com.felipe.patronescbnotifier;
 public class StateHalfOpen implements State {
 
     @Override
-    public String doNotify() {
-        return "";
+    public ProviderDTO doNotify() {
+        return null;
     }
 
     @Override

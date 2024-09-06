@@ -2,9 +2,12 @@ package com.felipe.patronescbnotifier;
 
 public class StateOpen implements State {
 
+    public StateOpen(Notifier notifier) {
+    }
+
     @Override
-    public String doNotify() {
-        return "";
+    public ProviderDTO doNotify() {
+        return null;
     }
 
     @Override
