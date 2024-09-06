@@ -1,17 +1,18 @@
 package com.felipe.patronescbnotifier;
 
-public class StateOpen implements State {
+public class StateOpen extends State {
 
     public StateOpen(Notifier notifier) {
+        super(notifier);
     }
 
     @Override
     public ProviderDTO doNotify() {
-        return null;
+        return super.doNotify();
     }
 
     @Override
-    public String doPing() {
-        return "";
+    public void transferState() {
+        super.getNotifier().setState(new StateHalfOpen(getNotifier()));
     }
 }
