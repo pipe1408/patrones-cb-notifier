@@ -10,7 +10,7 @@ public class StateOpen extends State {
         super(notifier);
         setUrlProveedor("http://localhost:8082/api/");
         setNombreProveedor("Proveedor 2");
-        int timeout = 100;
+        int timeout = 10;
         ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
         scheduler.schedule(() -> transferState("half"), timeout, TimeUnit.SECONDS);
     }
