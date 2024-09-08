@@ -54,6 +54,7 @@ public abstract class State {
     }
 
     public abstract ProviderDTO doNotify();
+
     public void transferState(String state) {
         if ("closed".equals(state)) {
             notifier.setState(new StateClosed(notifier));
